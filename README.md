@@ -1,20 +1,19 @@
 experiment 2:
-docker --version
-docker login
-docker images
-docker ps
-docker build -t sample-web-app .
-docker run -p 3000:3000 sample-web-app
-docker kill container_name
-docker stop container_name
-docker --version	Checks if Docker is installed and shows a version.
-docker pull hello-world	Downloads a small test image from Docker Hub.
-docker run hello-world	Run the image to confirm Docker is working properly.
-docker images		Lists all downloaded images.
-docker ps -a		Shows all containers (even stopped ones).
-docker rm <container_id> 	Deletes a stopped container (get ID from docker ps -a).
-docker rmi hello-world	   	Removes the image itself from the system.
-docker info	Shows system-wide Docker setup (containers, images, driver info).
+docker --version              # Checks if Docker is installed and shows a version
+docker login                  # Log in to Docker Hub
+docker images                 # Lists all downloaded images
+docker ps                     # Shows running containers
+docker build -t sample-web-app .  # Builds Docker image from Dockerfile
+docker run -p 3000:3000 sample-web-app  # Runs the Docker container
+docker kill <container_name>     # Forcefully stops the container
+docker stop <container_name>     # Gracefully stops the container
+docker pull hello-world          # Downloads a small test image from Docker Hub
+docker run hello-world           # Runs the image to confirm Docker is working properly
+docker ps -a                     # Shows all containers (even stopped ones)
+docker rm <container_id>         # Deletes a stopped container
+docker rmi hello-world           # Removes the hello-world image
+docker info                      # Shows Docker system info
+
 
 experiment 3 uploaded:
 ● docker build -t sample-web-app .
